@@ -1,0 +1,71 @@
+.navbar{
+  background-color:#dd929233;
+  padding:0.5rem ;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo { /*tamaño del logo*/
+  width: 150px;
+  height: 150px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.navbar-item {
+  color: black;
+  font-size: 1.1rem;
+  font-weight:bolder;
+  cursor: pointer;
+}
+
+.navbar-item.active {
+  font-weight: bold;
+}
+
+.navbar-item:hover {
+  color: #f1b7a2;
+}
+
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+  .navbar-collapse-btn {
+    display: block; /* Mostrar botón en móviles */
+  }
+
+  .navbar-list {
+    display: none; /* Ocultar lista en móviles */
+  }
+
+  .navbar-collapse {
+    display: flex; /* Mostrar colapso en móviles */
+  }
+}
+
+.get-started-btn {
+  background-color: #f1b7a2; 
+  color: white; /* Color del texto */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de fuente */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+.get-started-btn:hover {
+  background-color: #d86f6f; /* Color de fondo al pasar el mouse */
+  color: #f9cca9; /* Color del texto al pasar el mouse */
+}

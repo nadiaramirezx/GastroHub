@@ -1,0 +1,117 @@
+.hero-section {
+  height: 450px;
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex-direction:initial  ;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+  background-color: #fff;
+}
+
+.hero-content {
+  max-width: 50%;
+  text-align: left;
+
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.highlight-text {
+  color: #de7372; /* Color rosado para "Comparte" */
+  font-weight: bold;
+}
+
+.hero-button {
+  margin: 8px;
+  padding: 1em 2.1rem 1.1rem;
+  background-color: #de7372; /* Color del botón */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  transition: color 1s ease-in-out;
+  box-shadow: 0em -0.2rem 0em #de7372 inset;
+}
+
+/* Estilos para la imagen del hero */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem; 
+}
+
+.hero-image img {
+  width: 100%; /* Ajusta el tamaño de la imagen al ancho de su contenedor */
+  max-width: 500px; /* Limita el tamaño máximo de la imagen */
+  height: auto; /* Asegura que la altura se ajuste automáticamente para mantener la proporción */
+  transform: rotate(-10deg); /* Aplica una rotación de -10 grados */
+  border-radius: 0.75rem; /* Bordes redondeados */
+}
+
+
+.hero-button:hover{
+  background-color: transparent;
+  color:#de7372;
+  border: 3px solid #de7372;
+}
+.reasons-section {
+  background-color: #7e8687; 
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 98.8vw;  /*largo del cuadro azul de reasons*/
+  
+}
+.reason-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.reason-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.try-button {
+  background-color: #8c8f94;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.try-button:hover {
+  background-color: #6b6e73;
+}
+
+.coment-section{
+  background-color: #FFBFB1;
+}

@@ -1,0 +1,37 @@
+<div className="container flex flex-wrapp justify-end items-center">
+       {/* Primera tarjeta */}
+       <div className="card bg-white shadow-lg rounded-lg overflow-hidden m-2 p-4 relative">
+         <div className="card-overlay bg-gray-800 opacity-30 absolute inset-0"></div>
+         <div className="card-content relative z-10">
+           <div className="flex items-center mb-4">
+             <img src={tablet} className="h-10 w-10 rounded-full border-2" alt="Avatar" />
+           </div>
+           <h4>Organiza tus platillos de la manera que quieras</h4>
+         </div>
+         <button className="hero-button">Try it now</button>
+       </div>
+ 
+       {/* Segunda tarjeta */}
+       <div className="card bg-white shadow-lg rounded-lg overflow-hidden m-2 p-4 relative">
+         <div className="card-overlay bg-gray-800 opacity-30 absolute inset-0"></div>
+         <div className="card-content relative z-10">
+           <div className="flex items-center mb-4">
+             <img src={share} className="h-10 w-10 rounded-full border-2" alt="Avatar" />
+           </div>
+           <h4>Acceso rapido y sencillo a tus creaciones</h4>
+         </div>
+         <button className="hero-button">Try it now</button>
+       </div>
+ 
+       {/* Tercera tarjeta */}
+       <div className="card bg-white shadow-lg rounded-lg overflow-hidden m-2 p-4 relative">
+         <div className="card-overlay bg-gray-800 opacity-30 absolute inset-0"></div>
+         <div className="card-content relative z-10">
+           <div className="flex items-center mb-4">
+             <img src={family} className="h-10 w-10 rounded-full border-2" alt="Avatar" />
+           </div>
+           <h4>Comparte con otros estudiantes o usuarios.</h4>
+         </div>
+         <button className="hero-button">Try it now</button>
+       </div>
+     </div>
