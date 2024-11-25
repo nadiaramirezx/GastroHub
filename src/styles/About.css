@@ -10,8 +10,9 @@
  }
  
 .hero-content {
-   max-width: 50%;
+   
    text-align: justify;
+   margin-left: 2rem;
  }
  
  .hero-content h4 {

@@ -9,12 +9,13 @@ import About_us from './pages/About_us';
 function App() {
   
   return(
+    
     <div>
       <Header/>
-      <About_us/> 
+      <Home/>
+      
     </div>
-   
-    
+  
   )
 
 }

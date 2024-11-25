@@ -1,0 +1,16 @@
+.pie-pagina {
+   background-color: #000;
+   color: white;
+   text-align: center;
+   padding: 20px 0;
+   position: fixed; /* Footer siempre visible */
+   bottom: 0;
+   width: 100%;
+ }
+ 
+ .iconos-redes img {
+   width: 25px;
+   margin: 0 10px;
+   vertical-align: middle;
+ }
+ 

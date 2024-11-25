@@ -60,7 +60,7 @@
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   font-size: 1.1rem; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de fuente */
+  font-weight: bold; 
   cursor: pointer; /* Cambiar cursor al pasar el mouse */
   transition: background-color 0.3s ease; /* Transición suave al cambiar color */
 }
@@ -68,4 +68,57 @@
 .get-started-btn:hover {
   background-color: #d86f6f; /* Color de fondo al pasar el mouse */
   color: #f9cca9; /* Color del texto al pasar el mouse */
+}
+
+/*diseño de tailwind*/
+
+/* Lista de navegación */
+.navbar-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #ffd0e0; /* Fondo suave rosa */
+  border-radius: 10px;
+}
+
+/* Espaciado entre los elementos en dispositivos móviles */
+@media (min-width: 768px) {
+  .navbar-list {
+    flex-direction: row;
+    padding: 0;
+    margin-top: 0;
+    background-color: white;
+    border: 0;
+  }
+}
+
+/* Elementos de la lista */
+.navbar-item {
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar-item:hover {
+  background-color: #f1b7a2; 
+  color: white;
+  border-radius: 5px;
+}
+
+/* Cambios para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-container {
+    display: none;
+  }
+
+  .navbar-item {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navbar-item:hover {
+    background-color: #f1b7a2;
+  }
 }

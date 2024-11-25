@@ -136,6 +136,7 @@ h2 {
   align-items: center;
   justify-content: center;
   transition: ease all 2.3s;
+  
 }
 
 .card-back a {
@@ -150,6 +151,7 @@ h2 {
   padding: 14px 32px;
   outline: none;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .card-back a:hover {

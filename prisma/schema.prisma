@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")  //Prisma buscará la URL de conexión en el archivo .env
+}
+
+//creacion de las tabla//
+
+model Usuarios {
+  id_usuario Int @id @default(autoincrement())
+  nombre String 
+  email String @unique
+  password String
+  foto_perfil    String?   // URL para la foto de perfil
+  fecha_registro DateTime @default(now())
+  recetarios Recetario[] //relacion de uno a muchos//
+  historial Historial[] //saber movimientos del user
+}
+
+model Recetario{
+  id_recetario Int @id @default(autoincrement())
+  nombre String
+  descripcion String?
+  fecha_creacion DateTime @default(now())
+  usuario_id Int
+  usuario Usuarios @relation(fields: [usuario_id], references: [id_usuario])
+  recetas Receta[]  //relacion con varias recetas
+  
+}
+model Receta {
+  id_receta     Int       @id @default(autoincrement())
+  nombre        String
+  imagen        String    // URL de la imagen asociada a la receta
+  archivo       String    // URL del archivo con los detalles de la receta
+  fecha_creacion DateTime @default(now())
+  recetario_id  Int
+  recetario     Recetario @relation(fields: [recetario_id], references: [id_recetario])
+  categoria_id Int
+  categoria Categoria? @relation(fields: [categoria_id], references: [id_categoria])
+}
+
+model Categoria{
+  id_categoria Int @id @default(autoincrement())
+  nombre String
+  recetas Receta[]
+}
+
+model Historial{
+  id_historial Int @id @default(autoincrement())
+  accion String
+  fecha DateTime
+  usuario_id Int
+  usuario Usuarios @relation(fields: [usuario_id], references: [id_usuario])
+}
