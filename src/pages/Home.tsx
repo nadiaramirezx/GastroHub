@@ -3,10 +3,13 @@ import '../styles/home.css';
 import menu from '../assets/img/menu.png'
 import Card from '../components/Card';
 import Comentsection from '../components/Comentsection';
+//import { Header } from 'react-bootstrap/lib/Modal';
+import Header from '../components/Header';
 
 function Home() {
   return (
     <div>
+      <Header/>
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">

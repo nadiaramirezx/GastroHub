@@ -9,6 +9,8 @@ body {
    padding: 2rem;
    background-color: #c2d1d0a5;
    box-sizing: border-box;
+   margin-left: 0;
+  
 }
 
 .title {

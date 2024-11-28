@@ -1,0 +1,27 @@
+.container-login {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url('../assets//img/login.jpg');
+   background-size: cover; /* Asegura que cubra todo el contenedor */
+   background-position: center; /* Centra la imagen */
+   padding: 16px;
+ }
+ .container-login::before {
+   content: '';
+   position: absolute;
+   inset: 0; /* Cubre todo el contenedor */
+   background-image: url('../assets//img/login.jpg');
+   background-size: cover;
+   background-position: center;
+   filter: blur(10px); /* Aplica el desenfoque */
+   z-index: -1; /* Coloca el fondo detrás del contenido */
+ }
+ 
+ .form-container {
+   z-index: 1; /* Asegura que el formulario esté encima del fondo */
+   background: rgba(0, 0, 0, 0.779); /* Fondo oscuro semitransparente para el formulario */
+   padding: 16px;
+   border-radius: 1rem;
+ }
