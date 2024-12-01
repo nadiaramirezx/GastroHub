@@ -1,31 +1,41 @@
-import { Camera, Upload } from "lucide-react";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Camera, FileUp, Upload } from 'lucide-react';
+import React, { useState } from 'react';
 
-const RecipeUpload: React.FC = () => {
-  const [nombre, setNombre] = useState<string>("");
-  const [image, setImage] = useState<File | null>(null);
-  const [file, setFile] = useState<File | null>(null);
-  const navigate = useNavigate();
+function RecipeUpload() {
+  const [nombre, setNombre] = useState(''); // Estado para el nombre de la receta
+  const [image, setImage] = useState<File | null>(null); // Estado para la imagen
+  const [file, setFile] = useState<File | null>(null); // Estado para el archivo
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!nombre || !image) {
-      alert("Por favor, completa todos los campos requeridos.");
+    if (!nombre || !image || !file) {
+      alert('Por favor, completa todos los campos.');
       return;
     }
 
-    // Crear la nueva receta
-    const newRecipe = {
-      title: nombre,
-      description: file ? file.name : "Nueva receta subida",
-      image: URL.createObjectURL(image),
-      date: new Date().toLocaleDateString("es-ES"),
-    };
+    const formData = new FormData();
+    formData.append('nombre', nombre); // Añadir el nombre de la receta
+    formData.append('image', image); // Añadir la imagen
+    formData.append('file', file); // Añadir el archivo
 
-    // Redirigir a la página de recetas con el estado de la nueva receta
-    navigate("/Recipe", { state: { newRecipe } });
+    try {
+      const response = await fetch('http://localhost:3000/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('Receta subida exitosamente.');
+        setNombre('');
+        setImage(null);
+        setFile(null);
+      } else {
+        alert('Error al subir la receta.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -38,6 +48,7 @@ const RecipeUpload: React.FC = () => {
         </div>
 
         <div className="p-6 md:p-8 space-y-8">
+          {/* Campo para el nombre de la receta */}
           <input
             type="text"
             placeholder="Nombre de la receta"
@@ -47,6 +58,7 @@ const RecipeUpload: React.FC = () => {
           />
 
           <div className="flex flex-col md:flex-row gap-8">
+            {/* Sección para subir imagen */}
             <div className="flex-1 space-y-4">
               <label className="aspect-square bg-gray-100 rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer hover:border-[#e8a69f] transition-colors">
                 <input
@@ -59,13 +71,17 @@ const RecipeUpload: React.FC = () => {
                   <img src={URL.createObjectURL(image)} alt="Vista previa" className="w-3/4 h-3/4 object-cover" />
                 ) : (
                   <>
-                    <Camera className="w-10 h-10 text-gray-500" />
-                    <span className="mt-4 text-sm text-gray-600">Añadir imagen</span>
+                    <img src="/placeholder.svg" alt="Recipe preview" width={200} height={200} className="w-3/4 h-3/4 object-cover" />
+                    <div className="mt-4 flex items-center text-sm text-gray-600">
+                      <Camera className="w-5 h-5 mr-2" />
+                      <span>Añadir imagen</span>
+                    </div>
                   </>
                 )}
               </label>
             </div>
 
+            {/* Sección para subir archivo */}
             <div className="flex-1 space-y-6">
               <label className="w-full py-3 px-4 bg-white border border-gray-300 rounded-lg text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer">
                 <input
@@ -75,7 +91,7 @@ const RecipeUpload: React.FC = () => {
                   className="hidden"
                 />
                 <Upload className="w-5 h-5 mr-2" />
-                {file ? file.name : "Subir Archivo"}
+                {file ? file.name : 'Subir Archivo'}
               </label>
             </div>
           </div>
@@ -90,6 +106,6 @@ const RecipeUpload: React.FC = () => {
       </div>
     </form>
   );
-};
+}
 
 export default RecipeUpload;
