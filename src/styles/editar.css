@@ -12,25 +12,6 @@ body {
     background-color: #e6f0f5;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 100px;
-    background-color: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.logout-button {
-    background: none;
-    border: none;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
 
 .logout-icon {
     width: 40px;
@@ -52,7 +33,7 @@ body {
 
 .perfil-title {
     font-size: 1.8rem;
-    color: #a63b24;
+    color: #729d72; /* Color ajustado */
     margin-bottom: 1.5rem;
 }
 
@@ -63,6 +44,7 @@ body {
 
 .avatar-img {
     width: 100px;
+    margin-left: 40%;
     height: 100px;
     border-radius: 50%;
     border: 2px solid #ddd;
@@ -72,7 +54,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 10px;
-    background: #ffffff;
+    background: #c6b294; /* Color ajustado */
     border: 1px solid #ddd;
     border-radius: 50%;
     padding: 5px;
@@ -87,7 +69,7 @@ body {
 .perfil-username {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #374f59; /* Color ajustado */
     margin-bottom: 2rem;
 }
 
@@ -121,23 +103,23 @@ input {
 }
 
 input:focus {
-    border-color: #a63b24;
+    border-color: #729d72; /* Color ajustado */
 }
 
 /* Save Button */
 .save-button {
     grid-column: span 2;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 1rem;
-    background-color: #a63b24;
+    background-color: #729d72; /* Color ajustado */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 1px;
     transition: background-color 0.3s ease;
 }
 
 .save-button:hover {
-    background-color: #872a1c;
+    background-color: #5a7a5a; /* Un color más oscuro para el hover */
 }

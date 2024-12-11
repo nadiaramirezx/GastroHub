@@ -1,0 +1,89 @@
+/* Container and main layout */
+.slide-nav-container {
+  position: relative;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 2;
+  padding: 15px;
+}
+
+.slide-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-nav.open {
+  left: 0;
+}
+
+.slide-nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.slide-nav li {
+  margin: 20px 0;
+}
+
+.slide-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.slide-nav a:hover {
+  color: #f39c12;
+}
+
+/* Beautiful Background Effects */
+.slide-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #374F59, #374F59, #374F59);
+  filter: blur(10px);
+  z-index: -1;
+  animation: backgroundMove 10s infinite linear;
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}
+.profile-img {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
+.profile-img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image doesn't stretch */
+}

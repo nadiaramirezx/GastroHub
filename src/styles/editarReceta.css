@@ -1,0 +1,116 @@
+.edit-recipe-container {
+  max-width: 600px;
+  margin-top: 2%;
+  margin-left: 35%;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.623), -5px -5px 15px rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+  text-align: center;
+  color: #2e4b69;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4b6e93;
+  font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #4b6e93;
+  box-shadow: 0 0 8px rgba(75, 110, 147, 0.2);
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.current-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #5e8c5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.upload-btn:hover {
+  background-color: #67a167;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #2e4d6e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2e4b69;
+}
+
+.cancelar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #a8967b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.cancelar:hover {
+  background-color: #c6b294;
+}

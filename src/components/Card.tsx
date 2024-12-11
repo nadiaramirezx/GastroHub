@@ -8,7 +8,7 @@ import organizador from '../assets/img/organizador.jpg';
 function Card() {
    return (
     <section>
-    <h2>Razones para<br /> <span className="highlight-text">Elegirnos</span></h2>
+    <h2>Razones para<br /> <span className="highlight-elegirnos">Elegirnos</span></h2>
     <div className="container">
         <div className="card">
           <div className="cover item-a">

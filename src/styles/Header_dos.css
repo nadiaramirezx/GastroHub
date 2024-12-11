@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: 'Arial', sans-serif;
+ }
+ 
+ /* Estilo del header */
+ #header {
+   position:absolute; 
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: transparent; /* Fondo transparente */
+   z-index: 1000; /* Asegura que el header esté encima */
+   color: white;
+   transition: transform 0.3s ease-in-out;
+ }
+ #header.hidden{
+  transform: translateY(-100%); /* Mueve el header fuera de la vista */
+ }
+ 
+ .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ /* Navegación */
+ .nav {
+   display: flex;
+   gap: 2rem;
+ }
+ 
+ .nav {
+   font-size: 1rem;
+   text-decoration: none;
+   color: white; /* Cambia este color según el fondo */
+   font-weight: 500;
+   transition: color 0.3s ease;
+ }
+ 
+ .nav a:hover {
+   color: #ccc; /* Cambia a un gris claro al pasar el cursor */
+ }
+ 
+ /* Logo */
+ .logo {
+   text-align: center;
+   width: 250px;
+   margin-left: 62px;
+ }
+
+ 
+
+ 
+ /* Botones */
+ .buttons {
+   display: flex;
+   gap: 1rem;
+ }
+ 
+ .btn {
+   padding: 0.5rem 1rem;
+   border-radius: 0.5rem;
+   text-decoration: none;
+   font-weight: 600;
+   text-align: center;
+ }
+ 
+ .btn.join {
+   background-color: #88a47c; /* Verde para el botón "Join Us" */
+   color: white;
+ }
+ 
+ .btn.sign-in {
+   background-color: #607d62; /* Verde más oscuro para "Sign in" */
+   color: white;
+ }
+ 
+ .btn:hover {
+   opacity: 0.8;
+ }
+ 

@@ -36,7 +36,7 @@ function LoginPage() {
         return;
       }
       localStorage.setItem('token', data.token);
-      navigate('/about_us'); // Redirige después del login
+      navigate('/Recetario1'); // Redirige después del login
       
     } catch (error) {
       setError('Error de conexion a Github');
@@ -48,7 +48,7 @@ function LoginPage() {
     // guardar token en el localstorage//
     console.log("Google Token:", token)
     // Navegar al inicio
-    navigate("/About_us")
+    navigate("/Recetario1")
 
   }
 

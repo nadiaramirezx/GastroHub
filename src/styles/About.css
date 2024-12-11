@@ -1,38 +1,71 @@
-.hero-section {
-   height: 450px;
-   display: flex;
-   flex-direction:row  ;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px;
-   gap: 40px;
-   width: 100%;
-   /*background-color: #a339294c;*/
-   margin-left: 0;
+.about-section {
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+  background-image: url('../assets/img/about.png'); /* Ruta de la imagen */
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  background-attachment: fixed; /* Hace que la imagen sea fija durante el scroll */
+  position: relative; /* Necesario si se usa la superposición */
+}
+
+
+
+.about-section > * {
+  position: relative; /* Asegura que los elementos internos estén encima de la superposición */
+  z-index: 2;
+}
+
+.about-content {
+   margin-left: 3rem; /* Ajusta el margen para posicionar el texto */
+   padding: 2rem;
+   max-width: 600px; /* Controla el ancho del texto */
  }
- 
-.hero-content {
-   text-align: justify;
-   margin-left: 2rem;
- }
- 
- .hero-content h4 {
-   font-size: 1rem;
-   margin-bottom: 12px;
-   line-height: 1.2;
-   color: #000;
+ .about-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: white;
+  text-align: justify;
+  margin-right: 40px;
+  margin-bottom: 60px;
+  
+}
+
+ .about-section h1{
+  font-size: 3rem; /* Aumenta el tamaño para parecerse más al diseño */
+   margin-top: -50px;
+   line-height: 1.3;
+   color: white;
  }
  
  .highlight-text {
-   color: #a33929; /* Color rosado para "Nosotros" */
+   color: #c6b294; /* Color rosado para "Nosotros" */
    font-weight: bold;
  }
 
- .hero-image img {
-   height: 35dvw; 
-   margin-top: 2dvw;
- }
+.div-principal{
+  background-image: url('../assets/img/about.png');
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  background-attachment: fixed; /* Hace que la imagen sea fija durante el scroll */
+  position: relative; 
 
-/*diseño responsivo*/
+}
 
- 
+.equipo h1{
+  color: black;
+  margin-left: 20px;
+  
+}
+.equipo-text{
+  color:white; /* Color rosado para "Nosotros" */
+   font-weight: bold;
+   margin-left: 20px;
+}

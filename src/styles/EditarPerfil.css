@@ -1,0 +1,117 @@
+.edit-profile-page {
+    max-width: 600px;
+    margin: 0 auto; 
+    background-color:rgba(128, 128, 128, 0.534);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  input {
+    padding: 12px .5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    background-color: ;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  input, label, button {
+    width: 100%;
+  }
+  
+  .profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image img:hover {
+    transform: scale(1.1);
+  }
+  
+  .edit-profile-page {
+    margin-top: 20px;
+  display:flex; /* Asegura que puedas centrar internamente */
+  flex-direction: column; /* Alinea el contenido verticalmente */
+  align-items: center; /* Centra horizontalmente */
+}
+
+form {
+  align-items: center; /* Centra los inputs dentro del formulario */
+  width: 100%; /* Mantén el ancho del formulario */
+}
+
+input, label, button {
+  width: 100%; /* Reduce un poco el ancho para crear un margen visual */
+  max-width: 500px; /* Evita que los elementos sean demasiado anchos */
+}
